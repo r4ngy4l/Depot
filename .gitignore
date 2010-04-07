@@ -1,5 +1,7 @@
 .idea
 .idea/**/*
+nbproject
+nbroject/**/*
 config/database.yml
 tmp
 tmp/**/*
