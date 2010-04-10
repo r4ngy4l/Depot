@@ -4,6 +4,7 @@
 <head>
   <title>Pragprog Books Online Store</title>
   <%= stylesheet_link_tag "depot", :media => "all" %>
+  <%= javascript_include_tag :defaults %>
 </head>
 <body id="store">
 <div id="banner">
@@ -12,6 +13,10 @@
 </div>
 <div id="columns">
   <div id="side">
+    <% hidden_div_if(@cart.items.empty?, :id => "cart" ) do %>
+      <%= render(:partial => "cart" , :object => @cart) %>
+    <% end %>
+    
     <a href="http://www....">Home</a><br/>
     <a href="http://www..../faq">Questions</a><br/>
     <a href="http://www..../news">News</a><br/>
@@ -19,6 +24,16 @@
     <p><%= Time.new.strftime("%Y-%m-%d %H:%M:%S") %></p>
   </div>
   <div id="main">
+    <% if session[:counter] > 5 %>
+      <div>
+        You have accessed this page <%= pluralize(session[:counter], 'time') %>.
+      </div>
+    <% end %>
+
+    <% if flash[:notice] -%>
+      <div id="notice"><%= flash[:notice] %></div>
+    <% end -%>
+
     <%= yield :layout %>
   </div>
 </div>
