@@ -1,0 +1,2 @@
+.mode
+ATTACH DATABASE db/development.sqlite3 AS development
