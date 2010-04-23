@@ -5,5 +5,7 @@ nbroject/**/*
 config/database.yml
 tmp
 tmp/**/*
+doc
+doc/**/*
 log/*.log
 public/system
