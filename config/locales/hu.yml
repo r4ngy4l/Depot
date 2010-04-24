@@ -1,0 +1,53 @@
+hu:
+  layout:
+    title:  "Pragmatic kiad&#243;"
+    side:
+      home: "Kezdőlap"
+      questions:  "K&#233;rd&#233;sek"
+      news: "H&#237;rek"
+      contact:  "Kapcsolat"
+    cart:
+      title: "Kos&#225;r"
+      button:
+        empty: "Kos&#225;r ki&#252;r&#237;t&#233;se"
+        checkout: "Rendel&#233;s"
+  main:
+    title: "Pragmatic katal&#243;gus"
+    button:
+      add: "Kos&#225;rba tesz"
+  checkout:
+    legend: "K&#233;rem adja meg a rendel&#233;s adatait"
+    name: "N&#233;v"
+    address: "C&#237;m"
+    email: "E-mail"
+    pay_type: "Fizet&#233;s&nbsp;m&#243;dja"
+    pay_prompt: "V&#225;lassza ki a fizet&#233;s&nbsp;m&#243;dj&#225;t"
+    submit: "Rendel&#233;s"
+  flash:
+    thanks: "Rendelését köszönjük"
+  activerecord:
+    errors:
+      template:
+        body: "A hibák a következők:"
+        header:
+          one: "1 hiba miatt a(z) {{model}} mentése sikertelen"
+          other: "{{count}} hiba miatt  a(z) {{model}} mentése sikertelen"
+      messages:
+        inclusion: "nem szerepel a listában"
+        blank: "nem lehet üres"
+    models:
+      order: "rendelés"
+    attributes:
+      order:
+        address: "Cím"
+        name: "Név"
+        email: "E-mail"
+        pay_type: "Fizetés módja"
+  number:
+    currency:
+      format:
+        unit: "Ft"
+        precision: 2
+        separator: ","
+        delimiter: " "
+        format: "%n&nbsp;%u"
